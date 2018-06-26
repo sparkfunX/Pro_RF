@@ -204,18 +204,18 @@
 </deviceset>
 </devicesets>
 </library>
-<library name="supply1">
+<library name="supply1" urn="urn:adsk.eagle:library:371">
 <packages>
 </packages>
 <symbols>
-<symbol name="GND">
+<symbol name="GND" urn="urn:adsk.eagle:symbol:26925/1" library_version="1">
 <wire x1="-1.905" y1="0" x2="1.905" y2="0" width="0.254" layer="94"/>
 <text x="-2.54" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
 <pin name="GND" x="0" y="2.54" visible="off" length="short" direction="sup" rot="R270"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="GND" prefix="GND">
+<deviceset name="GND" urn="urn:adsk.eagle:component:26954/1" prefix="GND" library_version="1">
 <description>&lt;b&gt;SUPPLY SYMBOL&lt;/b&gt;</description>
 <gates>
 <gate name="1" symbol="GND" x="0" y="0"/>
@@ -1312,6 +1312,20 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="0" y1="-8.89" x2="101.6" y2="-8.89" width="0.2032" layer="51"/>
 <text x="1.27" y="-6.35" size="1.778" layer="51" font="vector" align="top-left">(Add these comments when uploading gerbers.)</text>
 </package>
+<package name="FIDUCIAL-1X2">
+<description>&lt;h3&gt;Fiducial - Circle, 1mm&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="1" dy="1" layer="1" roundness="100" cream="no"/>
+</package>
+<package name="FIDUCIAL-MICRO">
+<description>&lt;h3&gt;Fiducial - Circle, 0.25in&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<smd name="1" x="0" y="0" dx="0.635" dy="0.635" layer="1" roundness="100" cream="no"/>
+</package>
 </packages>
 <symbols>
 <symbol name="DOCFIELD">
@@ -1371,6 +1385,15 @@ We've spent an enormous amount of time creating and checking these footprints an
 <wire x1="22.86" y1="2.54" x2="22.86" y2="0" width="0.254" layer="94"/>
 <wire x1="22.86" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
 </symbol>
+<symbol name="FIDUCIAL">
+<description>&lt;h3&gt;Fiducial&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;
+&lt;p&gt;Devices using:
+&lt;ul&gt;&lt;li&gt;FIDUCIAL&lt;/li&gt;&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="-0.762" y1="0.762" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="0.762" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.27" width="0.254" layer="94"/>
+</symbol>
 </symbols>
 <devicesets>
 <deviceset name="FRAME-LEDGER" prefix="FRAME">
@@ -1421,6 +1444,25 @@ We've spent an enormous amount of time creating and checking these footprints an
 </technologies>
 </device>
 <device name="-PRODUCTION" package="PRODUCTION_INSTRUCTIONS">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="FIDUCIAL" prefix="FD">
+<description>&lt;h3&gt;Fiducial Alignment Points&lt;/h3&gt;
+&lt;p&gt;Point-of-reference for pick-and-place machines and other optical instruments.&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="FIDUCIAL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="1X2" package="FIDUCIAL-1X2">
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+<device name="UFIDUCIAL" package="FIDUCIAL-MICRO">
 <technologies>
 <technology name=""/>
 </technologies>
@@ -7315,20 +7357,19 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <text x="0" y="-8.3" size="0.6096" layer="27" font="vector" ratio="20" align="top-center">&gt;VALUE</text>
 <wire x1="-8.127" y1="8.127" x2="8.127" y2="8.127" width="0.2032" layer="21"/>
 <wire x1="8.127" y1="-8.127" x2="-8.127" y2="-8.127" width="0.2032" layer="21"/>
-<wire x1="-4" y1="6" x2="-4" y2="2" width="0.2032" layer="51"/>
-<wire x1="-4" y1="2" x2="0" y2="2" width="0.2032" layer="51"/>
-<wire x1="0" y1="2" x2="0" y2="6" width="0.2032" layer="51"/>
-<wire x1="0" y1="6" x2="-4" y2="6" width="0.2032" layer="51"/>
-<text x="-5.485" y="5.35" size="1.27" layer="51" font="vector" ratio="12">1</text>
-<wire x1="2" y1="-0.5" x2="2" y2="1.5" width="0.2032" layer="51"/>
-<wire x1="4" y1="1.5" x2="2" y2="1.5" width="0.2032" layer="51"/>
-<wire x1="4" y1="-0.5" x2="4" y2="1.5" width="0.2032" layer="51"/>
-<wire x1="4" y1="-0.5" x2="2" y2="-0.5" width="0.2032" layer="51"/>
+<wire x1="-4" y1="6" x2="-4" y2="2" width="0.2032" layer="21"/>
+<wire x1="-4" y1="2" x2="0" y2="2" width="0.2032" layer="21"/>
+<wire x1="0" y1="2" x2="0" y2="6" width="0.2032" layer="21"/>
+<wire x1="0" y1="6" x2="-4" y2="6" width="0.2032" layer="21"/>
+<wire x1="2" y1="-0.5" x2="2" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="4" y1="1.5" x2="2" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="4" y1="-0.5" x2="4" y2="1.5" width="0.2032" layer="21"/>
+<wire x1="4" y1="-0.5" x2="2" y2="-0.5" width="0.2032" layer="21"/>
 <wire x1="-8" y1="-8" x2="8" y2="-8" width="0.127" layer="51"/>
 <wire x1="8" y1="-8" x2="8" y2="8" width="0.127" layer="51"/>
 <wire x1="8" y1="8" x2="-8" y2="8" width="0.127" layer="51"/>
 <wire x1="-8" y1="8" x2="-8" y2="-8" width="0.127" layer="51"/>
-<circle x="-9.089" y="8.392" radius="0.508" width="0" layer="21"/>
+<circle x="-9.089" y="8.392" radius="0.254" width="0" layer="21"/>
 <wire x1="-8.127" y1="-8.127" x2="-8.127" y2="-7.859" width="0.2032" layer="21"/>
 <wire x1="8.127" y1="-7.859" x2="8.127" y2="-8.127" width="0.2032" layer="21"/>
 <wire x1="-8.127" y1="5.826" x2="-8.127" y2="6.1562" width="0.2032" layer="21"/>
@@ -7793,18 +7834,18 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="P+3" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="P+4" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
 <part name="C9" library="SparkFun-Capacitors" deviceset="4.7UF" device="-0603-6.3V-(10%)" value="4.7uF"/>
-<part name="GND18" library="supply1" deviceset="GND" device=""/>
-<part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="GND18" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND20" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="D4" library="SparkFun-LED" deviceset="LED-YELLOW" device="0603" value="Yellow"/>
 <part name="R9" library="SparkFun-Resistors" deviceset="1KOHM" device="-0603-1/10W-1%" value="1k"/>
 <part name="F1" library="SparkFun-Fuses" deviceset="PPTC" device="_HALF-AMP" value="6V/0.5A"/>
-<part name="GND3" library="supply1" deviceset="GND" device=""/>
-<part name="GND4" library="supply1" deviceset="GND" device=""/>
-<part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="GND3" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U1" library="SparkFun-IC-Power" deviceset="MCP73831" device=""/>
 <part name="R5" library="SparkFun-Resistors" deviceset="2.0KOHM" device="-0603-1/10W-5%" value="2.0k"/>
-<part name="GND14" library="supply1" deviceset="GND" device=""/>
-<part name="GND17" library="supply1" deviceset="GND" device=""/>
+<part name="GND14" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND17" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="C12" library="SparkFun-Capacitors" deviceset="1.0UF" device="-0603-16V-10%" value="1.0uF"/>
 <part name="C13" library="SparkFun-Capacitors" deviceset="10UF-POLAR" device="-EIA3216-16V-10%(TANT)" value="10uF"/>
 <part name="GND29" library="SparkFun" deviceset="GND" device=""/>
@@ -7822,10 +7863,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="FRAME2" library="SparkFun-Aesthetics" deviceset="FRAME-LEDGER" device=""/>
 <part name="J1" library="SparkFun-Connectors" deviceset="USB_MICRO-B" device="_HALF_PTH_MILL"/>
 <part name="P+1" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="GND2" library="supply1" deviceset="GND" device=""/>
+<part name="GND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="S1" library="SparkFun-Switches" deviceset="SWITCH-SPDT" device="-SMD-RIGHT-ANGLE" value="Power"/>
-<part name="GND6" library="supply1" deviceset="GND" device=""/>
-<part name="GND7" library="supply1" deviceset="GND" device=""/>
+<part name="GND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="GND7" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="D1" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="Green"/>
 <part name="J7" library="SparkFun-Connectors" deviceset="CONN_02" device="1X02_NO_SILK" value="PTH"/>
 <part name="J8" library="SparkFun-Connectors" deviceset="CONN_02" device="1X02_NO_SILK"/>
@@ -7837,7 +7878,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="J12" library="SparkFun-Connectors" deviceset="CONN_02" device="-JST-2MM-SMT" value="JST"/>
 <part name="J2" library="SparkFun-Connectors" deviceset="QWIIC_CONNECTOR" device="JS-1MM"/>
 <part name="P+2" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
-<part name="GND1" library="supply1" deviceset="GND" device=""/>
+<part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="J10" library="SparkFun-Connectors" deviceset="AVR_SPI_PROG_3X2" device="TESTPOINTS"/>
 <part name="GND8" library="SparkFun" deviceset="GND" device=""/>
 <part name="SUPPLY10" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
@@ -7858,6 +7899,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="U$26" library="SparkFun-Aesthetics" deviceset="SPECIAL_INSTRUCTIONS" device="-ORDERING"/>
 <part name="R4" library="SparkFun-Resistors" deviceset="10KOHM" device="-0603-1/10W-1%" value="10k"/>
 <part name="P+7" library="SparkFun-PowerSymbols" deviceset="3.3V" device=""/>
+<part name="FD1" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FD2" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FD3" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
+<part name="FD4" library="SparkFun-Aesthetics" deviceset="FIDUCIAL" device="1X2"/>
 </parts>
 <sheets>
 <sheet>
@@ -8014,6 +8059,10 @@ LoRa WAN compatibility</text>
 <instance part="U$26" gate="G$1" x="375.92" y="17.78"/>
 <instance part="R4" gate="G$1" x="327.66" y="104.14" rot="R90"/>
 <instance part="P+7" gate="G$1" x="327.66" y="111.76"/>
+<instance part="FD1" gate="G$1" x="429.26" y="20.32"/>
+<instance part="FD2" gate="G$1" x="426.72" y="20.32"/>
+<instance part="FD3" gate="G$1" x="426.72" y="17.78"/>
+<instance part="FD4" gate="G$1" x="429.26" y="17.78"/>
 </instances>
 <busses>
 </busses>
@@ -8967,6 +9016,16 @@ LoRa WAN compatibility</text>
 <note version="6.3" minversion="6.2.2" severity="warning">
 Since Version 6.2.2 text objects can contain more than one line,
 which will not be processed correctly with this version.
+</note>
+<note version="8.2" severity="warning">
+Since Version 8.2, EAGLE supports online libraries. The ids
+of those online libraries will not be understood (or retained)
+with this version.
+</note>
+<note version="8.3" severity="warning">
+Since Version 8.3, EAGLE supports URNs for individual library
+assets (packages, symbols, and devices). The URNs of those assets
+will not be understood (or retained) with this version.
 </note>
 </compatibility>
 </eagle>
