@@ -3,7 +3,7 @@
 <eagle version="9.1.0">
 <drawing>
 <settings>
-<setting alwaysvectorfont="no"/>
+<setting alwaysvectorfont="yes"/>
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
@@ -26292,6 +26292,36 @@ part number 2062-2P from STA</description>
 <text x="0.635" y="-1.905" size="0.4064" layer="27">&gt;VALUE</text>
 <text x="-7.239" y="-1.397" size="0.3048" layer="51" rot="R90">BOARD EDGE</text>
 </package>
+<package name="U.FL">
+<description>&lt;h3&gt;U.FL SMD Antenna Connector&lt;/h3&gt;
+&lt;p&gt;Specifications:
+&lt;li&gt;Area: 3.0mm x 2.5mm&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;
+&lt;p&gt;&lt;a href=”http://cdn.sparkfun.com/datasheets/Wireless/Antennas/RF-001001.pdf”&gt;Datasheet referenced for footprint&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Example device(s):
+&lt;ul&gt;&lt;li&gt;U.FL&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<wire x1="1.3" y1="0.7" x2="1.3" y2="2" width="0.127" layer="21"/>
+<wire x1="1.3" y1="2" x2="-1.3" y2="2" width="0.127" layer="21"/>
+<wire x1="-1.3" y1="-2" x2="1.3" y2="-2" width="0.127" layer="21"/>
+<wire x1="1.3" y1="-2" x2="1.3" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="-1.3" y1="0.7" x2="-1.3" y2="2" width="0.127" layer="21"/>
+<wire x1="-1.3" y1="-2" x2="-1.3" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="1.4" y2="2" width="0.127" layer="21"/>
+<wire x1="1.4" y1="-2" x2="1.4" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.5" y1="0.7" x2="1.5" y2="2" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-2" x2="1.5" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.5" y1="2" x2="1.3" y2="2" width="0.127" layer="21"/>
+<wire x1="1.5" y1="0.7" x2="1.3" y2="0.7" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-0.7" x2="1.3" y2="-0.7" width="0.127" layer="21"/>
+<wire x1="1.5" y1="-2" x2="1.3" y2="-2" width="0.127" layer="21"/>
+<smd name="1" x="0" y="1.375" dx="2.2" dy="0.85" layer="1"/>
+<smd name="2" x="0" y="-1.375" dx="2.2" dy="0.85" layer="1"/>
+<smd name="FEED" x="1.525" y="0" dx="1.05" dy="1" layer="1"/>
+<smd name="NC" x="-1.525" y="0" dx="1.05" dy="1" layer="1"/>
+<text x="-1.27" y="2.54" size="0.6096" layer="25" font="vector" ratio="20">&gt;NAME</text>
+<text x="-1.27" y="-2.54" size="0.6096" layer="27" font="vector" ratio="20" align="top-left">&gt;VALUE</text>
+</package>
 </packages>
 <symbols>
 <symbol name="USB-5PIN">
@@ -26435,6 +26465,15 @@ part number 2062-2P from STA</description>
 <text x="-2.54" y="-4.826" size="1.778" layer="96" font="vector">&gt;VALUE</text>
 <text x="-2.54" y="3.048" size="1.778" layer="95" font="vector">&gt;NAME</text>
 <pin name="1" x="7.62" y="0" visible="off" length="middle" direction="pas" swaplevel="1" rot="R180"/>
+</symbol>
+<symbol name="U.FL">
+<wire x1="0" y1="-2.54" x2="0" y2="-7.62" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="1.1359" width="0.254" layer="94"/>
+<circle x="0" y="0" radius="2.54" width="0.254" layer="94"/>
+<pin name="GND@0" x="-2.54" y="-5.08" visible="off" length="short"/>
+<pin name="SIGNAL" x="5.08" y="0" visible="off" length="middle" rot="R180"/>
+<pin name="GND@1" x="-2.54" y="-7.62" visible="off" length="short"/>
+<text x="-3.81" y="4.064" size="1.778" layer="95">&gt;NAME</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -27399,6 +27438,34 @@ Also note, the SNAP packages are for using a snappable style connector. We sell 
 <technologies>
 <technology name="">
 <attribute name="PROD_ID" value="HW-08694" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="U.FL" prefix="J" uservalue="yes">
+<description>&lt;h3&gt;SMD Antenna Connector - U.FL&lt;/h3&gt;
+&lt;p&gt;2mm height, 3.0mm x 3.0mm receptacle size. &lt;/p&gt;
+&lt;p&gt;&lt;b&gt;SparkFun Products:&lt;/b&gt;
+&lt;ul&gt;&lt;li&gt;&lt;a href="https://www.sparkfun.com/products/13287"&gt;SparkFun WiFi Shield - ESP8266&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/13231”&gt;SparkFun ESP8266 Thing&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=”https://www.sparkfun.com/products/11420”&gt;SparkFun MiniGen - Pro Mini Signal Generator Shield&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="U.FL" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="U.FL">
+<connects>
+<connect gate="G$1" pin="GND@0" pad="1"/>
+<connect gate="G$1" pin="GND@1" pad="2"/>
+<connect gate="G$1" pin="SIGNAL" pad="FEED"/>
+</connects>
+<technologies>
+<technology name="">
+<attribute name="PROD_ID" value="CONN-09193"/>
+<attribute name="SF_ID" value="WRL-09144" constant="no"/>
+<attribute name="VALUE" value="U.FL"/>
 </technology>
 </technologies>
 </device>
@@ -30530,36 +30597,40 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="LOGO1" library="SparkFun-Aesthetics" deviceset="REVISION" device=""/>
 <part name="LOGO2" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME" device=".1_INCH"/>
 <part name="LOGO3" library="SparkFun-Aesthetics" deviceset="SFE_LOGO_NAME_FLAME" device=".1_INCH"/>
+<part name="J13" library="SparkFun-Connectors" deviceset="U.FL" device="" value="U.FL"/>
+<part name="GND12" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
-<text x="236.22" y="190.5" size="1.778" layer="97" font="vector">Max Voltage Input: 6VDC</text>
-<text x="236.22" y="187.96" size="1.778" layer="97" font="vector">Max Current Output: 600mA</text>
+<text x="231.14" y="233.68" size="1.778" layer="97" font="vector">Max Voltage Input: 6VDC</text>
+<text x="231.14" y="231.14" size="1.778" layer="97" font="vector">Max Current Output: 600mA</text>
 <text x="44.45" y="198.12" size="1.778" layer="97" font="vector">Cut this jumper if powering the board with more than 5.5V</text>
-<text x="80.01" y="114.808" size="1.778" layer="97" font="vector">500mA charging</text>
+<text x="82.55" y="142.748" size="1.778" layer="97" font="vector">500mA charging</text>
 <text x="251.46" y="48.26" size="1.778" layer="97" font="vector">Close jumpers for
 LoRa WAN compatibility</text>
-<text x="68.58" y="142.24" size="2.54" layer="97" font="vector">Battery Charging</text>
-<text x="226.06" y="228.6" size="2.54" layer="97" font="vector">Power In</text>
-<text x="368.3" y="198.12" size="2.54" layer="97" font="vector">Pro Micro</text>
-<text x="215.9" y="83.82" size="2.54" layer="97" font="vector">RFM69HCW Module</text>
-<text x="78.74" y="243.84" size="2.54" layer="97" font="vector">USB</text>
-<text x="419.1" y="7.62" size="2.54" layer="97" font="vector">v01</text>
-<text x="353.06" y="7.62" size="2.54" layer="94" font="vector">Andy England</text>
-<text x="68.58" y="63.5" size="2.54" layer="97" font="vector">Connections</text>
-<wire x1="149.86" y1="279.4" x2="157.48" y2="279.4" width="0.1524" layer="97" style="longdash"/>
-<wire x1="157.48" y1="279.4" x2="157.48" y2="172.72" width="0.1524" layer="97" style="longdash"/>
-<wire x1="157.48" y1="172.72" x2="157.48" y2="127" width="0.1524" layer="97" style="longdash"/>
-<wire x1="157.48" y1="127" x2="157.48" y2="88.9" width="0.1524" layer="97" style="longdash"/>
-<wire x1="157.48" y1="88.9" x2="157.48" y2="0" width="0.1524" layer="97" style="longdash"/>
-<wire x1="0" y1="88.9" x2="157.48" y2="88.9" width="0.1524" layer="97" style="longdash"/>
-<wire x1="157.48" y1="172.72" x2="0" y2="172.72" width="0.1524" layer="97" style="longdash"/>
-<wire x1="307.34" y1="0" x2="307.34" y2="127" width="0.1524" layer="97" style="longdash"/>
-<wire x1="307.34" y1="127" x2="307.34" y2="279.4" width="0.1524" layer="97" style="longdash"/>
-<wire x1="307.34" y1="279.4" x2="309.88" y2="279.4" width="0.1524" layer="97" style="longdash"/>
-<wire x1="307.34" y1="127" x2="157.48" y2="127" width="0.1524" layer="97" style="longdash"/>
-<text x="348.996" y="11.176" size="2.54" layer="94" font="vector">Elias Santistevan</text>
+<text x="5.08" y="165.1" size="2.54" layer="94" font="vector">Battery Charging</text>
+<text x="165.1" y="269.24" size="2.54" layer="94" font="vector">Power In</text>
+<text x="314.96" y="269.24" size="2.54" layer="94" font="vector">Pro Micro</text>
+<text x="162.56" y="101.6" size="2.54" layer="94" font="vector">RFM69HCW Module</text>
+<text x="419.1" y="7.62" size="2.54" layer="97" font="vector">v10</text>
+<text x="358.14" y="7.62" size="2.54" layer="94" font="vector">Andy England</text>
+<text x="2.54" y="81.28" size="2.54" layer="94" font="vector">Connections</text>
+<wire x1="157.48" y1="279.4" x2="157.48" y2="172.72" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="157.48" y1="172.72" x2="157.48" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="157.48" y1="109.22" x2="157.48" y2="88.9" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="157.48" y1="88.9" x2="157.48" y2="0" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="0" y1="88.9" x2="157.48" y2="88.9" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="157.48" y1="172.72" x2="0" y2="172.72" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="307.34" y1="0" x2="307.34" y2="38.1" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="307.34" y1="38.1" x2="307.34" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="307.34" y1="109.22" x2="307.34" y2="279.4" width="0.1524" layer="97" style="shortdash"/>
+<wire x1="307.34" y1="109.22" x2="157.48" y2="109.22" width="0.1524" layer="97" style="shortdash"/>
+<text x="354.076" y="11.176" size="2.54" layer="94" font="vector">Elias Santistevan</text>
+<text x="7.62" y="271.78" size="2.54" layer="94" font="vector">USB</text>
+<wire x1="233.68" y1="0" x2="233.68" y2="38.1" width="0.2032" layer="97" style="shortdash"/>
+<wire x1="233.68" y1="38.1" x2="307.34" y2="38.1" width="0.2032" layer="97" style="shortdash"/>
+<text x="243.84" y="33.02" size="2.54" layer="94" font="vector">Antennae</text>
 </plain>
 <instances>
 <instance part="R6" gate="G$1" x="337.82" y="172.72" rot="R90"/>
@@ -30569,18 +30640,18 @@ LoRa WAN compatibility</text>
 </instance>
 <instance part="GND19" gate="1" x="345.44" y="137.16"/>
 <instance part="R7" gate="G$1" x="406.4" y="172.72" rot="R90"/>
-<instance part="GND23" gate="1" x="337.82" y="116.84" rot="R270"/>
+<instance part="GND23" gate="1" x="335.28" y="104.14"/>
 <instance part="Y2" gate="G$1" x="355.6" y="116.84" smashed="yes" rot="R90">
-<attribute name="NAME" x="354.33" y="120.65" size="1.778" layer="95"/>
-<attribute name="VALUE" x="352.298" y="111.252" size="1.778" layer="96"/>
+<attribute name="NAME" x="347.218" y="117.094" size="1.778" layer="95"/>
+<attribute name="VALUE" x="347.218" y="114.3" size="1.778" layer="96"/>
 </instance>
-<instance part="C5" gate="G$1" x="347.98" y="119.38" smashed="yes" rot="R270">
-<attribute name="NAME" x="344.678" y="120.269" size="1.778" layer="95"/>
-<attribute name="VALUE" x="342.646" y="122.936" size="1.778" layer="96"/>
+<instance part="C5" gate="G$1" x="342.9" y="121.92" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.598" y="122.809" size="1.778" layer="95"/>
+<attribute name="VALUE" x="347.726" y="122.936" size="1.778" layer="96"/>
 </instance>
-<instance part="C7" gate="G$1" x="347.98" y="114.3" smashed="yes" rot="R270">
-<attribute name="NAME" x="344.678" y="114.808" size="1.778" layer="95"/>
-<attribute name="VALUE" x="342.138" y="111.76" size="1.778" layer="96"/>
+<instance part="C7" gate="G$1" x="342.9" y="111.76" smashed="yes" rot="R270">
+<attribute name="NAME" x="339.598" y="108.966" size="1.778" layer="95"/>
+<attribute name="VALUE" x="347.218" y="109.22" size="1.778" layer="96"/>
 </instance>
 <instance part="GND24" gate="1" x="358.14" y="93.98"/>
 <instance part="C8" gate="G$1" x="325.12" y="127" smashed="yes" rot="R180">
@@ -30604,13 +30675,13 @@ LoRa WAN compatibility</text>
 <attribute name="NAME" x="396.24" y="181.356" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="394.716" y="178.816" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="R11" gate="G$1" x="91.44" y="226.06" smashed="yes" rot="R180">
-<attribute name="NAME" x="87.376" y="227.838" size="1.778" layer="95"/>
-<attribute name="VALUE" x="92.71" y="227.838" size="1.778" layer="96"/>
+<instance part="R11" gate="G$1" x="88.9" y="226.06" smashed="yes" rot="R180">
+<attribute name="NAME" x="84.836" y="227.838" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="227.838" size="1.778" layer="96"/>
 </instance>
-<instance part="R12" gate="G$1" x="91.44" y="231.14" smashed="yes" rot="R180">
-<attribute name="NAME" x="87.63" y="232.918" size="1.778" layer="95"/>
-<attribute name="VALUE" x="92.71" y="232.918" size="1.778" layer="96"/>
+<instance part="R12" gate="G$1" x="88.9" y="231.14" smashed="yes" rot="R180">
+<attribute name="NAME" x="85.09" y="232.918" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="232.918" size="1.778" layer="96"/>
 </instance>
 <instance part="GND28" gate="1" x="81.28" y="215.9"/>
 <instance part="GND5" gate="1" x="337.82" y="147.32"/>
@@ -30678,16 +30749,16 @@ LoRa WAN compatibility</text>
 <instance part="J2" gate="G$1" x="137.16" y="33.02" rot="MR0"/>
 <instance part="P+2" gate="G$1" x="127" y="40.64"/>
 <instance part="GND1" gate="1" x="127" y="25.4"/>
-<instance part="J10" gate="G$1" x="370.84" y="185.42" smashed="yes">
-<attribute name="NAME" x="365.76" y="191.008" size="1.778" layer="95" font="vector"/>
+<instance part="J10" gate="G$1" x="368.3" y="246.38" smashed="yes">
+<attribute name="NAME" x="363.22" y="251.968" size="1.778" layer="95" font="vector"/>
 </instance>
-<instance part="GND8" gate="1" x="383.54" y="177.8"/>
-<instance part="SUPPLY10" gate="G$1" x="383.54" y="190.5"/>
+<instance part="GND8" gate="1" x="381" y="238.76"/>
+<instance part="SUPPLY10" gate="G$1" x="381" y="251.46"/>
 <instance part="P+5" gate="G$1" x="406.4" y="190.5"/>
 <instance part="P+6" gate="G$1" x="398.78" y="190.5"/>
 <instance part="U3" gate="U1" x="378.46" y="129.54"/>
 <instance part="J11" gate="G$1" x="73.66" y="40.64" rot="R180"/>
-<instance part="J4" gate="G$1" x="137.16" y="50.8" rot="R180"/>
+<instance part="J4" gate="G$1" x="266.7" y="7.62" rot="R180"/>
 <instance part="R1" gate="G$1" x="198.12" y="190.5" rot="R90"/>
 <instance part="R2" gate="G$1" x="198.12" y="175.26" rot="R90"/>
 <instance part="GND9" gate="1" x="198.12" y="165.1"/>
@@ -30703,7 +30774,7 @@ LoRa WAN compatibility</text>
 <attribute name="NAME" x="258.064" y="55.88" size="1.778" layer="95" font="vector"/>
 <attribute name="VALUE" x="261.62" y="55.88" size="1.778" layer="96" font="vector" align="top-left"/>
 </instance>
-<instance part="U$26" gate="G$1" x="375.92" y="17.78"/>
+<instance part="U$26" gate="G$1" x="393.7" y="43.18"/>
 <instance part="R4" gate="G$1" x="203.2" y="63.5" rot="R90"/>
 <instance part="P+7" gate="G$1" x="203.2" y="71.12"/>
 <instance part="FD1" gate="G$1" x="429.26" y="20.32"/>
@@ -30713,6 +30784,8 @@ LoRa WAN compatibility</text>
 <instance part="LOGO1" gate="G$1" x="331.47" y="7.366"/>
 <instance part="LOGO2" gate="G$1" x="330.2" y="38.1"/>
 <instance part="LOGO3" gate="G$1" x="331.47" y="37.592"/>
+<instance part="J13" gate="G$1" x="266.7" y="22.86" rot="R180"/>
+<instance part="GND12" gate="1" x="274.32" y="15.24"/>
 </instances>
 <busses>
 </busses>
@@ -30722,17 +30795,6 @@ LoRa WAN compatibility</text>
 <wire x1="345.44" y1="139.7" x2="345.44" y2="142.24" width="0.1524" layer="91"/>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="GND19" gate="1" pin="GND"/>
-</segment>
-<segment>
-<wire x1="345.44" y1="119.38" x2="342.9" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="345.44" y1="114.3" x2="342.9" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="119.38" x2="342.9" y2="116.84" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="116.84" x2="342.9" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="340.36" y1="116.84" x2="342.9" y2="116.84" width="0.1524" layer="91"/>
-<junction x="342.9" y="116.84"/>
-<pinref part="C5" gate="G$1" pin="2"/>
-<pinref part="C7" gate="G$1" pin="2"/>
-<pinref part="GND23" gate="1" pin="GND"/>
 </segment>
 <segment>
 <wire x1="360.68" y1="99.06" x2="358.14" y2="99.06" width="0.1524" layer="91"/>
@@ -30922,9 +30984,9 @@ LoRa WAN compatibility</text>
 </segment>
 <segment>
 <pinref part="J10" gate="G$1" pin="6"/>
-<wire x1="381" y1="182.88" x2="383.54" y2="182.88" width="0.1524" layer="91"/>
+<wire x1="378.46" y1="243.84" x2="381" y2="243.84" width="0.1524" layer="91"/>
 <pinref part="GND8" gate="1" pin="GND"/>
-<wire x1="383.54" y1="182.88" x2="383.54" y2="180.34" width="0.1524" layer="91"/>
+<wire x1="381" y1="243.84" x2="381" y2="241.3" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R2" gate="G$1" pin="1"/>
@@ -30941,6 +31003,28 @@ LoRa WAN compatibility</text>
 <wire x1="218.44" y1="50.8" x2="215.9" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="GND2" gate="1" pin="GND"/>
 <wire x1="215.9" y1="50.8" x2="215.9" y2="48.26" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="J13" gate="G$1" pin="GND@1"/>
+<wire x1="269.24" y1="30.48" x2="274.32" y2="30.48" width="0.1524" layer="91"/>
+<wire x1="274.32" y1="30.48" x2="274.32" y2="27.94" width="0.1524" layer="91"/>
+<pinref part="J13" gate="G$1" pin="GND@0"/>
+<wire x1="274.32" y1="27.94" x2="274.32" y2="17.78" width="0.1524" layer="91"/>
+<wire x1="269.24" y1="27.94" x2="274.32" y2="27.94" width="0.1524" layer="91"/>
+<junction x="274.32" y="27.94"/>
+<pinref part="GND12" gate="1" pin="GND"/>
+</segment>
+<segment>
+<wire x1="340.36" y1="121.92" x2="337.82" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="340.36" y1="111.76" x2="337.82" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="121.92" x2="337.82" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="337.82" y1="116.84" x2="337.82" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<pinref part="C7" gate="G$1" pin="2"/>
+<pinref part="GND23" gate="1" pin="GND"/>
+<wire x1="335.28" y1="106.68" x2="335.28" y2="116.84" width="0.1524" layer="91"/>
+<wire x1="335.28" y1="116.84" x2="337.82" y2="116.84" width="0.1524" layer="91"/>
+<junction x="337.82" y="116.84"/>
 </segment>
 </net>
 <net name="MISO" class="0">
@@ -30961,8 +31045,8 @@ LoRa WAN compatibility</text>
 </segment>
 <segment>
 <pinref part="J10" gate="G$1" pin="1"/>
-<wire x1="363.22" y1="187.96" x2="360.68" y2="187.96" width="0.1524" layer="91"/>
-<label x="360.68" y="187.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="360.68" y1="248.92" x2="358.14" y2="248.92" width="0.1524" layer="91"/>
+<label x="358.14" y="248.92" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RXI" class="0">
@@ -31158,26 +31242,6 @@ LoRa WAN compatibility</text>
 <pinref part="R9" gate="G$1" pin="1"/>
 </segment>
 </net>
-<net name="N$16" class="0">
-<segment>
-<wire x1="360.68" y1="114.3" x2="355.6" y2="114.3" width="0.1524" layer="91"/>
-<wire x1="355.6" y1="114.3" x2="353.06" y2="114.3" width="0.1524" layer="91"/>
-<junction x="355.6" y="114.3"/>
-<pinref part="Y2" gate="G$1" pin="1"/>
-<pinref part="C7" gate="G$1" pin="1"/>
-<pinref part="U3" gate="U1" pin="XTAL2"/>
-</segment>
-</net>
-<net name="N$17" class="0">
-<segment>
-<wire x1="360.68" y1="119.38" x2="355.6" y2="119.38" width="0.1524" layer="91"/>
-<wire x1="355.6" y1="119.38" x2="353.06" y2="119.38" width="0.1524" layer="91"/>
-<junction x="355.6" y="119.38"/>
-<pinref part="Y2" gate="G$1" pin="2"/>
-<pinref part="C5" gate="G$1" pin="1"/>
-<pinref part="U3" gate="U1" pin="XTAL1"/>
-</segment>
-</net>
 <net name="UCAP" class="0">
 <segment>
 <wire x1="325.12" y1="132.08" x2="325.12" y2="129.54" width="0.1524" layer="91"/>
@@ -31195,9 +31259,9 @@ LoRa WAN compatibility</text>
 <pinref part="U3" gate="U1" pin="D-"/>
 </segment>
 <segment>
-<wire x1="96.52" y1="231.14" x2="99.06" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="231.14" x2="96.52" y2="231.14" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="1"/>
-<label x="99.06" y="231.14" size="1.27" layer="95" xref="yes"/>
+<label x="96.52" y="231.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D+" class="0">
@@ -31207,9 +31271,9 @@ LoRa WAN compatibility</text>
 <pinref part="U3" gate="U1" pin="D+"/>
 </segment>
 <segment>
-<wire x1="96.52" y1="226.06" x2="99.06" y2="226.06" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="226.06" x2="96.52" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="1"/>
-<label x="99.06" y="226.06" size="1.27" layer="95" xref="yes"/>
+<label x="96.52" y="226.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="D11" class="0">
@@ -31247,7 +31311,7 @@ LoRa WAN compatibility</text>
 </net>
 <net name="N$20" class="0">
 <segment>
-<wire x1="78.74" y1="231.14" x2="86.36" y2="231.14" width="0.1524" layer="91"/>
+<wire x1="78.74" y1="231.14" x2="83.82" y2="231.14" width="0.1524" layer="91"/>
 <pinref part="R12" gate="G$1" pin="2"/>
 <pinref part="J1" gate="J1" pin="D-"/>
 </segment>
@@ -31368,9 +31432,9 @@ LoRa WAN compatibility</text>
 </segment>
 <segment>
 <pinref part="J10" gate="G$1" pin="2"/>
-<wire x1="381" y1="187.96" x2="383.54" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="378.46" y1="248.92" x2="381" y2="248.92" width="0.1524" layer="91"/>
 <pinref part="SUPPLY10" gate="G$1" pin="3.3V"/>
-<wire x1="383.54" y1="190.5" x2="383.54" y2="187.96" width="0.1524" layer="91"/>
+<wire x1="381" y1="251.46" x2="381" y2="248.92" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="D1" gate="G$1" pin="A"/>
@@ -31393,7 +31457,6 @@ LoRa WAN compatibility</text>
 <wire x1="78.74" y1="228.6" x2="83.82" y2="228.6" width="0.1524" layer="91"/>
 <wire x1="83.82" y1="228.6" x2="83.82" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="R11" gate="G$1" pin="2"/>
-<wire x1="83.82" y1="226.06" x2="86.36" y2="226.06" width="0.1524" layer="91"/>
 <pinref part="J1" gate="J1" pin="D+"/>
 </segment>
 </net>
@@ -31469,9 +31532,14 @@ LoRa WAN compatibility</text>
 <pinref part="U2" gate="U1" pin="ANT"/>
 </segment>
 <segment>
-<wire x1="129.54" y1="50.8" x2="127" y2="50.8" width="0.1524" layer="91"/>
-<label x="127" y="50.8" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="259.08" y1="7.62" x2="256.54" y2="7.62" width="0.1524" layer="91"/>
+<label x="256.54" y="7.62" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="J4" gate="G$1" pin="1"/>
+</segment>
+<segment>
+<pinref part="J13" gate="G$1" pin="SIGNAL"/>
+<wire x1="261.62" y1="22.86" x2="259.08" y2="22.86" width="0.1524" layer="91"/>
+<label x="259.08" y="22.86" size="1.27" layer="95" font="vector" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RFM_RST" class="0">
@@ -31504,8 +31572,8 @@ LoRa WAN compatibility</text>
 </segment>
 <segment>
 <pinref part="J10" gate="G$1" pin="3"/>
-<wire x1="363.22" y1="185.42" x2="360.68" y2="185.42" width="0.1524" layer="91"/>
-<label x="360.68" y="185.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="360.68" y1="246.38" x2="358.14" y2="246.38" width="0.1524" layer="91"/>
+<label x="358.14" y="246.38" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MOSI" class="0">
@@ -31526,15 +31594,15 @@ LoRa WAN compatibility</text>
 </segment>
 <segment>
 <pinref part="J10" gate="G$1" pin="4"/>
-<wire x1="381" y1="185.42" x2="383.54" y2="185.42" width="0.1524" layer="91"/>
-<label x="383.54" y="185.42" size="1.27" layer="95" xref="yes"/>
+<wire x1="378.46" y1="246.38" x2="381" y2="246.38" width="0.1524" layer="91"/>
+<label x="381" y="246.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="!RST" class="0">
 <segment>
 <pinref part="J10" gate="G$1" pin="5"/>
-<wire x1="363.22" y1="182.88" x2="360.68" y2="182.88" width="0.1524" layer="91"/>
-<label x="360.68" y="182.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="360.68" y1="243.84" x2="358.14" y2="243.84" width="0.1524" layer="91"/>
+<label x="358.14" y="243.84" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <wire x1="337.82" y1="167.64" x2="337.82" y2="165.1" width="0.1524" layer="91"/>
@@ -31655,6 +31723,36 @@ LoRa WAN compatibility</text>
 <wire x1="243.84" y1="60.96" x2="256.54" y2="60.96" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="60.96" x2="256.54" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="256.54" y1="58.42" x2="259.08" y2="58.42" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="U3" gate="U1" pin="XTAL1"/>
+<wire x1="360.68" y1="119.38" x2="358.14" y2="119.38" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="119.38" x2="358.14" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="121.92" x2="355.6" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="121.92" x2="353.06" y2="121.92" width="0.1524" layer="91"/>
+<wire x1="353.06" y1="121.92" x2="350.52" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<wire x1="350.52" y1="121.92" x2="347.98" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="Y2" gate="G$1" pin="2"/>
+<wire x1="355.6" y1="119.38" x2="355.6" y2="121.92" width="0.1524" layer="91"/>
+<junction x="355.6" y="121.92"/>
+</segment>
+</net>
+<net name="N$6" class="0">
+<segment>
+<wire x1="358.14" y1="111.76" x2="355.6" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="355.6" y1="111.76" x2="353.06" y2="111.76" width="0.1524" layer="91"/>
+<wire x1="353.06" y1="111.76" x2="350.52" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="C7" gate="G$1" pin="1"/>
+<wire x1="350.52" y1="111.76" x2="347.98" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="U3" gate="U1" pin="XTAL2"/>
+<wire x1="360.68" y1="114.3" x2="358.14" y2="114.3" width="0.1524" layer="91"/>
+<wire x1="358.14" y1="114.3" x2="358.14" y2="111.76" width="0.1524" layer="91"/>
+<pinref part="Y2" gate="G$1" pin="1"/>
+<wire x1="355.6" y1="114.3" x2="355.6" y2="111.76" width="0.1524" layer="91"/>
+<junction x="355.6" y="111.76"/>
 </segment>
 </net>
 </nets>
